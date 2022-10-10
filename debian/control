@@ -1,0 +1,30 @@
+Source: libdevel-leak-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Edi Stojicevic <estojicevic@debianworld.org>,
+           gregor herrmann <gregoa@debian.org>
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 9.20120312~),
+               perl
+Standards-Version: 3.9.5
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libdevel-leak-perl.git
+Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libdevel-leak-perl.git
+Homepage: https://metacpan.org/release/Devel-Leak
+
+Package: libdevel-leak-perl
+Architecture: any
+Depends: ${perl:Depends},
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: utility for looking for perl objects that are not reclaimed
+ Devel::Leak has two functions: NoteSV and CheckSV.
+ .
+ NoteSV walks the perl internal table of allocated SVs (scalar values) - (which
+ actually  contains arrays and hashes too), and records their addresses in a
+ table. It returns a count of these "things", and stores a pointer to the
+ table (which is obtained from the heap using malloc()) in its argument.
+ .
+ CheckSV is passed argument which holds a pointer to a table created by
+ NoteSV. It re-walks the perl-internals and calls sv_dump() for any "things"
+ which did not exist when NoteSV was called. It returns a count of the number
+ of "things" now allocated.

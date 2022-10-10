@@ -1,0 +1,52 @@
+libdevel-leak-perl (0.03-3) unstable; urgency=low
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ intrigeri ]
+  * Bump debhelper compat level to 9.
+  * Adjust versioned Build-Depends on debhelper to (>= 9.20120312~)
+    to get hardening build flags.
+  * Reformat debian/control with cme fix dpkg.
+  * Declare compatibility with Standards-Version 3.9.5.
+
+ -- intrigeri <intrigeri@debian.org>  Sun, 09 Mar 2014 03:07:55 +0100
+
+libdevel-leak-perl (0.03-2) unstable; urgency=low
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * Switch to source format 3.0 (quilt).
+  * Add a patch to fix "no sv_dump even with debugperl". Thanks to Tim
+    Cutts for the bug report and the pointers. 
+    Closes: #639353
+    LP: #450482
+  * Use tiny debian/rules, switch to debhelper 8.
+  * debian/copyright: use DEP5 formatting.
+  * Set Standards-Version to 3.9.2, remove version from perl build
+    dependency.
+  * Lowercase short description.
+  * Add /me to Uploaders.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 26 Aug 2011 14:43:15 +0200
+
+libdevel-leak-perl (0.03-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #480383)
+
+ -- Edi Stojicevic <estojicevic@debianworld.org>  Fri, 09 May 2008 15:49:19 +0100
